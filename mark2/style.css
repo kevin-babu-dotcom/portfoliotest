@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(133, 133, 133);
+    background: linear-gradient(90deg, rgb(97, 53, 201) 0%, rgb(0, 0, 0) 100%);
+}
+.namebox{
+    height: 480px;
+    width: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    color: #fab325;
+    background-image: url(idk3\,jpg.jpeg);
+    background-size: cover;
+    background-position: center;
+    font-family: Bebas neue;
+    font-weight: 900;
+    /* text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.774); */
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.89);  
+    transition: 0.5s;
+}
+@media screen and (max-width: 900px) {
+    .namebox{
+        width: 600px;
+    }
+}
+.blur .name{
+    position: absolute;
+    top: 183px;
+    background: rgba(199, 187, 13, 0);
+    font-size: 120px;
+    text-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+    border-radius: 1.5rem;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.774);
+}
+.blur .disc{
+    overflow: hidden;
+    position: absolute;
+    top: 500px;
+    opacity: 0;
+    /* text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.932); */
+
+}
+.blur:hover .name{
+    display: none;
+    position:absolute;
+    top: 20px;
+    transition: 0.5s;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.774);
+}
+.blur:hover .disc{
+    display: block;
+    font-size: 80px;
+    position: absolute;
+    right: 80px;
+    left: 80px;
+    top: 100px;
+    transition: 0.5s;
+    opacity: 100;
+
+}
+.blur{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+    backdrop-filter: blur(0px);
+    box-shadow: inset;
+    box-shadow: 0px 0px 2px 2px #00000080;
+    overflow: hidden;
+}
+.blur:hover{
+    background: rgba(0, 0, 0, 0.253);
+    backdrop-filter: blur(3px);
+    transition: 0.3s;
+}
+.namebox:hover{
+    width: 700px;
+    height: 820px;
+    transition: 0.5s;
+}
+
+
+
+
+.navmenu{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: lobster;
+}
+.navmenu ul{
+    position: relative;
+    padding-left: 50px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.navmenu ul::after{
+    content:'';
+    background: rgb(0, 0, 0);;
+    width: 4px;
+    height: calc(100% - 58px);
+    position: absolute;
+    left: 40px;
+    top: 0;
+    z-index: -20;
+    margin-top: 29px;
+}
+.navmenu ul li{
+    padding: 30px 0px;
+    padding-left: 15px;
+    background: rgba(177, 177, 8, 0);
+    
+}
+.navmenu ul li a{
+    text-decoration: none;
+    position: relative;
+    background-color: #403672;
+    color:#fca311;
+    font-weight: 600;
+    font-family: Open sans;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.301), 0 6px 20px 0 rgba(0, 0, 0, 0.534); 
+    
+    
+}
+.navmenu ul li a:before{
+    content:'';
+    position: absolute;
+    background-color: rgb(206, 176, 245);
+    height: 18px;
+    width: 18px;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 4px solid #000000;
+    transition: background 250ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.205); 
+    transition: 0.2ms;
+}
+.navmenu ul li a.active{
+    background:#291d06;
+    border: 4px solid #00000000;
+    color: #ffd60a;
+    border-radius: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 900;
+    font-weight: 900;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.29); 
+    text-transform: uppercase;
+}
+.navmenu ul li a.active::before{
+    background:#ff9d00;
+    left: -40px;
+    height: 20px;
+    width: 20px;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.29); 
+}
+
+
+
+
+.About{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(247, 28%, 47%, 1);
+    background: linear-gradient(90deg, rgb(97, 53, 201) 0%, rgb(0, 0, 0) 100%);
+    overflow: hidden;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    background-color: #00000000;
+}
+.card{
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    background-image: url(https://www.ncskochi.ac.in/Images/slider-1.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.89);  
+    border: solid 5px;
+    border-color:#ffffff;
+    background-color: rgba(15, 14, 17, 0.288);
+    backdrop-filter: rgb(15, 14, 17);
+}
+.card:nth-child(3){
+    background-image: url(https://saps.ac.in/wp-content/uploads/2021/02/DSC06488.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.card:nth-child(4){
+    background-size: cover;
+    background-image: url(https://www.mec.ac.in/model_media/carousels/1._college_aerial.jpg);
+    background-position: center;
+}
+.card2{
+    background-image: url(https://cc.sj-cdn.net/instructor/88n3br0ycsl6-newsela/courses/3s1fps6g6wmnw/promo-image.1657651501.png);
+    background-size: cover;
+    background-position: center;
+    width: 700px;
+    height: 30rem;
+    border-radius: 1rem;
+    transition: .4s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px;
+    border-color:#ffffff;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.89);  
+}
+.card:hover >card2{
+    width: 6rem;
+    background-color: #000000;
+
+}
+.card a{
+    font-family: bebas neue;
+    position: absolute;
+    left: 60px;
+    opacity: 0;
+    color: #ffffff;
+    font-size: 130px;
+    font-weight: 900;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.774);
+    text-decoration: none;
+    transition: .5s;
+}
+.card2 p{
+    font-family: bebas neue;
+    position: relative;
+    opacity: 100;
+    color: #ffbb00;
+    font-size: 150px;
+    font-weight: 700;
+    text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.774);
+
+}
+
+.card:hover{
+    width: 700px;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: .5s;
+
+}
+.card:hover a{
+    opacity: 100%;
+    transition: .5s;
+
+}
+.blur2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(99, 80, 148, 0.288);
+    backdrop-filter: blur(0px);
+    transition: .5s;
+
+}
+.blur2:hover{
+    background: rgba(151, 151, 151, 0);
+    backdrop-filter: blur(0px);
+}
+
+
+
+
+.yellow{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(247, 28%, 47%, 1);
+    background: linear-gradient(90deg, rgb(97, 53, 201) 0%, rgb(0, 0, 0) 100%);
+}
+
+
+
+
+
+.green{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(247, 28%, 47%, 1);
+    background: linear-gradient(90deg, rgb(97, 53, 201) 0%, rgb(0, 0, 0) 100%);
+
+}
+.blue{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(247, 28%, 47%, 1);
+    background: linear-gradient(90deg, rgb(97, 53, 201) 0%, rgb(0, 0, 0) 100%);
+
+}
+::-webkit-scrollbar{
+    width: 30px;
+    height: 50px;
+}
+::-webkit-scrollbar-track{
+    background-color:#000000;
+}
+::-webkit-scrollbar-thumb{
+    margin: 5px;
+    padding-right: 10ox;
+    border: 0.55em solid #000000;
+    border-radius: 1.5rem;
+    background-color: #430c83;
+}
